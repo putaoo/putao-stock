@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>股票信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<center>
+    <br><br>
+    <h2 style="color:green">股票信息</h2>
+    <br><br>
+
+    <ul class="list-group" style="width:600px">
+        <li class="list-group-item" th:text="'时间: ' + ${excelExport.date}"></li>
+        <li class="list-group-item" th:text="'股票名称: ' + ${excelExport.baseInformation.stockName}"></li>
+        <li class="list-group-item" th:text="'股票代码: ' + ${excelExport.baseInformation.stockCode}"></li>
+        <li class="list-group-item" th:text="'所属板块: ' + ${excelExport.baseInformation.industry}"></li>
+        <li class="list-group-item" th:text="'当前股价: ' + ${excelExport.baseInformation.currentStockPrice}"></li>
+        <li class="list-group-item" th:text="'计算股价: ' + ${excelExport.stockPrice.stockPrice}"></li>
+        <li class="list-group-item" th:text="'静态市盈率: ' + ${excelExport.baseInformation.staticPE}"></li>
+        <li class="list-group-item" th:text="'动态市盈率: ' + ${excelExport.baseInformation.dynamicPE}"></li>
+        <li class="list-group-item" th:text="'营收同比增加: ' + ${excelExport.baseInformation.increment}"></li>
+        <li class="list-group-item" th:text="'是否低估: ' + ${excelExport.stockPrice.isLower}"></li>
+        <li class="list-group-item" th:text="'低估百分比: ' + ${excelExport.stockPrice.lowerRatio}"></li>
+        <li class="list-group-item" th:text="'目标营收增速: ' + ${excelExport.incrementRatio.revenueQuarterRatio}"></li>
+        <li class="list-group-item" th:text="'目标净利润增速: ' + ${excelExport.incrementRatio.profitQuarterRatio}"></li>
+        <li class="list-group-item" th:text="'报告期营收增速: ' + ${excelExport.reportIncrement.reportRevenueIncrementRatio}"></li>
+        <li class="list-group-item" th:text="'报告期净利润增速: ' + ${excelExport.reportIncrement.reportProfitIncrementRatio}"></li>
+    </ul>
+
+    <a href="/stock/query"><button type="button" class="btn btn-primary">查询</button></a>
+    </center>
+</body>
+
+</html>
