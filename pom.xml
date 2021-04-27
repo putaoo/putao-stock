@@ -8,10 +8,9 @@
 		<version>2.2.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.stock</groupId>
-	<artifactId>putao-stock</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>putao-stock</name>
+	<groupId>com.trade.system</groupId>
+	<artifactId>trade-system-calculate</artifactId>
+	<version>0.0.1</version>
 	<description>calculate stock rate</description>
 	<packaging>jar</packaging>
 
@@ -65,11 +64,6 @@
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
 			<version>3.6.0</version>
-		</dependency>
-		<!-- ThymeLeaf 依赖 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
 	</dependencies>
